@@ -1,0 +1,1 @@
+﻿This component can be used in a various project types: web, desktop, etc.

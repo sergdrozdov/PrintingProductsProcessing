@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>PrintingProducts.Lib</AssemblyName>
+    <RootNamespace>PrintingProducts.Lib</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Content.cs" />
+  </ItemGroup>
+
+</Project>
