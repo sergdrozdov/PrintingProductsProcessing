@@ -3,15 +3,16 @@ This is a sample of an ASN (Acknowledgement Shipping Notification) message that 
 Each HDR section, represents a carton box, and the lines below the HDR describe the contents of the box.
 When we reach another HDR section, it means that there is another box and we repeat the process from the beginning.
 
-Data file structure:
----------------------------------------------
-HDR  BKPT777                                                                         6874453I                           
-LINE G000009760                           9781473663800                     12     
-LINE G000009760                           9781473667273                     2      
-LINE G000009760                           9781473665798                     1      
+## Data file structure
+<pre>
+HDR  BKPT777                                           6874453I                           
+LINE G000009760         9781473663800         12     
+LINE G000009760         9781473667273         2      
+LINE G000009760         9781473665798         1      
+</pre>
 
-Description:
----------------------------------------------
+## Description
+<pre>
 HDR             - just a keyword telling that a new box is being described.
 BKPT777         - Supplier identifier.
 6874453I        - Carton box identifier. Displayed on the box.
@@ -19,7 +20,7 @@ LINE            - keyword to identify product item in the box.
 G000009760      - Our PO Number that we sent to the supplier.
 9781473663800   - ISBN 13 (product barcode).
 12              - Product quantity.
-
+</pre>
 
 A few important notes: the file could be very large and exceed the available RAM. So try to optimize memory usage while reading it.
 
@@ -33,6 +34,7 @@ IMPORTANT: The task you are going to resolve is used to estimate your approach a
     You can find some help how to work with big files in internet but not just copy, think first.
     If you have any question about task please feel free to ask, if you do not understand something again please feel free to ask.
 
+```csharp
 public class Carton
 {
     public string SupplierIdentifier { get; set; }
@@ -48,5 +50,5 @@ public class Carton
 
     }
 }
-
+```
 Look forward to seeing your solution.
