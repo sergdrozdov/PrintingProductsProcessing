@@ -17,7 +17,9 @@ namespace PrintingProducts.Lib
                 isValid = false;
 
             var qty = 0;
-            isValid = int.TryParse(data[3], out qty);
+            var isQtyValid = int.TryParse(data[3], out qty);
+            if (!isQtyValid)
+                isValid = false;
 
             return isValid;
         }
